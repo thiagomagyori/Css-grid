@@ -1,0 +1,188 @@
+body
+{
+    padding-bottom: 400px;
+}
+h1
+{
+    text-align: center;
+   color: crimson;
+}
+
+p
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+.item
+{
+    background-color: crimson;
+    border: 1px solid black;
+    text-align: center;
+    color: azure;
+}
+
+
+/*importante saber que grid-template-columns definimos a quantidade de culunas na horizontal quando deixamos em auto ela vai se ajustar automatico*/
+/*já o grid-template-rows altera a largura da linha*/
+/*temos o display-inline grid que a grid se ajusta ao tamanho do conteúdo*/
+.container
+{
+    display: grid;
+    grid-template-columns: 70px auto 70px;
+    grid-template-rows: 150px auto 100px;
+
+}
+
+.item1
+{
+    background-color:aqua;
+    border: 1px solid black;
+    text-align: center;
+    color: azure;
+}
+
+.item2
+{
+    background-color:rgb(107, 2, 84);
+    border: 1px solid black;
+    text-align: center;
+    color: azure;
+}
+
+.item3
+{
+    background-color:rgb(32, 29, 32);
+    border: 1px solid black;
+    text-align: center;
+    color: azure;
+}
+
+.item4
+{
+    background-color:rgb(153, 10, 189);
+    border: 1px solid black;
+    text-align: center;
+    color: azure;
+}
+
+.item5
+{
+    background-color:rgb(46, 40, 40);
+    border: 1px solid black;
+    text-align: center;
+    color: azure;
+}
+
+
+
+
+
+
+
+
+
+
+.grid-column-star-end
+{ /*ele vai até o item 3 mais não inclui ele ou seja ele vai oculpar 2 posição no layout*/
+  /*  grid-column-start: 1; */
+ /* grid-column-end: 3; */
+    grid-column: 1 / 3;
+    /*temos também o span grid-column: 1 / span 3 começa na coluna 1 e expande até a coluna 3*/
+}
+
+.grid-row-star-end
+{
+    grid-row-start: 1;
+    grid-row-end: 5; 
+    /*ou podemos usar o grid-row: 1 / 5; */
+}
+
+/*Grid aria é uma junção dos 
+grid-row-star
+grid-column-star
+grid-row-end
+grid-column-end*/
+.grid-aria
+{ 
+ grid-area: 1 / 1 / 3 / 3; /*o que temos que gravar é a ordem inicio da linha inicio da coluna final da linha final da culuna*/
+}
+
+.header
+{
+    grid-area: cabecalho;
+}
+
+.main
+{
+    grid-area: corpo;
+}
+
+.lateral
+{
+    grid-area: lateral;
+}
+
+.footer
+{
+    grid-area: rodape;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container2
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}
+
+
+/*lembrando que estamos aplicando no cotainer e não nos elementos, caso queira aplicar nos elementos só usar o margin*/
+.container3
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+   gap: 5px; /*podemos colocar 2 valor gap: 5px 15px ou para colocar apenas 1 espaçamento usamos o column-gap: ou row-gap:*/
+    
+}
+
+.container4
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+   gap: 5px;
+    
+}
+
+.container5
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+   gap: 5px;
+    
+}
+
+.container6
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 10em 10em 10em; /*importante na construção de layout deixar em auto que a altura se ajusta conforme o que tem dentro*/
+    grid-template-areas: 
+    "cabecalho cabecalho cabecalho cabecalho"
+    "corpo corpo corpo lateral"
+    "rodape rodape rodape rodape"
+    ;
+    
+}
